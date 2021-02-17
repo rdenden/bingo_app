@@ -20,6 +20,9 @@ window.addEventListener('load', () => {
   
     const number = document.getElementById('number')  
     let num2 = numbers2[Math.floor(Math.random() * numbers2.length)]
+    if (num2 === undefined){
+      number.innerHTML = '完'
+    }else{
     number.innerHTML = num2 
     index = numbers2.indexOf(num2)
     numbers2.splice(index,1)
@@ -45,6 +48,7 @@ window.addEventListener('load', () => {
     $boxNumbers[4].style[0] && $boxNumbers[8].style[0] && $boxNumbers[12].style[0] && $boxNumbers[16].style[0] && $boxNumbers[20].style[0] == "background-color") {
       const bingo = document.getElementById('bingo')  
       bingo.innerHTML = "BINGO!!!"
+    }
     }
 
   })
