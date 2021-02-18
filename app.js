@@ -1,5 +1,11 @@
-// １〜９９の配列を用意
-let numbers = Array.from(new Array(99)).map((v,i) => i + 1)
+// １〜９９の配列を用意(forで)
+const numbers = []
+for (number = 1 ; number < 100; number += 1){
+  numbers.push(number)
+}
+// こうも書ける
+// let numbers = Array.from(new Array(99)).map((v,i) => i + 1)
+// こうも書ける
 
 // ビンゴシートを出力
 window.addEventListener('load', () => {
@@ -24,18 +30,28 @@ window.addEventListener('load', () => {
   }
 
   // ボタンをクリックするごとに数字を１つずつ出力
-  let numbers2 = Array.from(new Array(99)).map((v,i) => i + 1)
+  // １〜９９の配列を用意(whileで)
+  const numbers2 = []
+  let number = 1
+  while(number < 100) {
+    numbers2.push(number);
+    number += 1
+  }
+  // こうも書ける
+  // let numbers2 = Array.from(new Array(99)).map((v,i) => i + 1)
+  // こうも書ける
+
   const clickButton = document.getElementById('number-button')
   clickButton.addEventListener("click",() => {
   
-    const number = document.getElementById('number')  
+    const outputNumber = document.getElementById('number')  
     let num2 = numbers2[Math.floor(Math.random() * numbers2.length)]
     
     // undefinedを書き換える
     if (num2 === undefined){
-      number.innerHTML = '終'
+      outputNumber.innerHTML = '終'
     }else{
-    number.innerHTML = num2 
+    outputNumber.innerHTML = num2 
     index = numbers2.indexOf(num2)
     numbers2.splice(index,1)
     // 確認用
