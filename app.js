@@ -74,11 +74,10 @@ window.addEventListener('load', () => {
       console.log($boxNumbers[0].style)
       }
       // リーチ判定(発火すると$boxNumbers[].style[0]の値が"background-color"となる)
-      
-      const bingo = document.getElementById('bingo');
+           
       // 各ビンゴライン(配列内各要素は、通常存在しない(undefined)が、発火すると"background-color")
       const line1 = [$boxNumbers[0].style[0], $boxNumbers[1].style[0], $boxNumbers[2].style[0], $boxNumbers[3].style[0], $boxNumbers[4].style[0]];
-      const line2 = [$boxNumbers[5].style[0], $boxNumbers[6].style[0], $boxNumbers[7].style[0], $boxNumbers[8].style[0] && $boxNumbers[9].style[0]]; 
+      const line2 = [$boxNumbers[5].style[0], $boxNumbers[6].style[0], $boxNumbers[7].style[0], $boxNumbers[8].style[0], $boxNumbers[9].style[0]]; 
       const line3 = [$boxNumbers[10].style[0], $boxNumbers[11].style[0], $boxNumbers[12].style[0], $boxNumbers[13].style[0], $boxNumbers[14].style[0]];
       const line4 = [$boxNumbers[15].style[0], $boxNumbers[16].style[0], $boxNumbers[17].style[0], $boxNumbers[18].style[0], $boxNumbers[19].style[0]];
       const line5 = [$boxNumbers[20].style[0], $boxNumbers[21].style[0], $boxNumbers[22].style[0], $boxNumbers[23].style[0], $boxNumbers[24].style[0]];
@@ -90,13 +89,13 @@ window.addEventListener('load', () => {
       const line11 = [$boxNumbers[0].style[0], $boxNumbers[6].style[0], $boxNumbers[12].style[0], $boxNumbers[18].style[0], $boxNumbers[24].style[0]];
       const line12 = [$boxNumbers[4].style[0], $boxNumbers[8].style[0], $boxNumbers[12].style[0], $boxNumbers[16].style[0], $boxNumbers[20].style[0]];
       // 各ビンゴラインの配列をさらに配列化してfor以下で取得しやすいようにする
-      const lines = [line1,line2,line3,line4,line5,line6,line7,line8,line9,line9,line10,line11,line12];
+      const lines = [line1,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11,line12];
       // 各ラインの発火数を配列で定義
       const counts = [0,0,0,0,0,0,0,0,0,0,0,0];
       
-      // 12ライン繰り返し処理
+      // 12ラインを繰り返し処理
       for (let i = 0; i < lines.length; i++) {
-        // 入れ子にして各ラインにおいて５回繰り返す
+        // 入れ子にして各ラインごとに、ボックスの発火確認を5回繰り返す
         for (let j = 0; j < 5; j += 1){
           // 各ラインの"background-color"の数を数える
           if (lines[i][j] === "background-color")
@@ -105,11 +104,13 @@ window.addEventListener('load', () => {
       }
       
       // 5つ発火しているラインがある場合にはBINGO!!!と表示
+      const bingo = document.getElementById('bingo');
       if (counts.includes(5))
         bingo.innerHTML = "BINGO!!!"
         // 4つ発火しているラインがある場合にはリーチ!と表示
         else if (counts.includes(4))
         bingo.innerHTML = "リーチ!"
+
       console.log(counts)
       
     
