@@ -8,8 +8,12 @@
 1. リロードすると、５×５のシートに１〜９９までの数字がランダムに配置される
 2. 数字を出すボタンを押すことで１〜９９までの数字が１つランダムに出力される
 3. ２で出力された数字がシート上に存在する場合には該当部分が赤く変わる
-![image](https://user-images.githubusercontent.com/75596850/109627274-cb33c800-7b84-11eb-8371-a0f8093fa80d.png)
+![image](https://user-images.githubusercontent.com/75596850/109627392-edc5e100-7b84-11eb-8431-5a92fe8fe0ec.png)
 4. リーチの場合は **リーチ!** と表示される
+![image](https://user-images.githubusercontent.com/75596850/109627523-0cc47300-7b85-11eb-8fd9-2a72f292d7e0.png)
+5. 縦横斜めいずれか一列が全て赤く点灯した場合右下に **BINGO!!!** と表示される
+![image](https://user-images.githubusercontent.com/75596850/109627676-34b3d680-7b85-11eb-93e1-607673ab90e3.png)
+
 5. 縦横斜めいずれか一列が全て赤く点灯した場合右下に **BINGO!!!** と表示される
 
 # 2 制作の意図
