@@ -92,7 +92,7 @@ window.addEventListener('load', () => {
       const lines = [line1,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11,line12];
       // 各ラインの発火数を配列で定義
       const counts = [0,0,0,0,0,0,0,0,0,0,0,0];
-      
+      const lastBox = ["","","","","","","","","","","",""]
       // 12ラインを繰り返し処理
       for (let i = 0; i < lines.length; i++) {
         // 入れ子にして各ラインごとに、ボックスの発火確認を5回繰り返す
@@ -102,7 +102,7 @@ window.addEventListener('load', () => {
           counts[i] += 1;     
         }
       }
-      
+      console.log(line2)
       // 5つ発火しているラインがある場合にはBINGO!!!と表示
       const bingo = document.getElementById('bingo');
       if (counts.includes(5))
@@ -110,13 +110,29 @@ window.addEventListener('load', () => {
         // 4つ発火しているラインがある場合にはリーチ!と表示
         else if (counts.includes(4))
         bingo.innerHTML = "リーチ!"
+      //   for (let k = 0; k < counts.length; k++)
+      //   if (counts[k] === 4)
+      //   lastBox[k] = lines[k].indexOf("background-color")
+      //   console.log(lastBox[k])
+      //   console.log(lastBox)
+      //   console.log(lines[k][lastBox[k]])
+      //   // for (let l = 0; l < lastBox.length; l++)
+      //   // lastBox[l]
+        
+      //   // lines[linesIndex] = "background-color:white;"
 
-      console.log(counts)
+
+        
+      //   // console.log(counts.indexOf(4))
+
+      //   console.log(counts)
+      //   console.log(lines[k])
+
+      // // console.log(linesIndex)
+      // // console.log(lines[linesIndex])
+      // // console.log(lines[k][lastBox[k]])
+        
       
-    
-
-
-
 
       // count1 = 0 
       // for (let a = 0 ; a < 5; a += 1){
