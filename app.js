@@ -110,16 +110,15 @@ window.addEventListener('load', () => {
         // 4つ発火しているラインがある場合にはリーチ!と表示
         else if (counts.includes(4))
         bingo.innerHTML = "リーチ!"
+        
+        
+        console.log(counts.indexOf(4,2))
 
+        const array4 = counts.filter((count) => {
+        return count === 4
+        }).length
 
-        // const counts = [4,4,3,2,1,4,5,5,4,4,4,4];
-        // console.log(counts.indexOf(4,2))
-
-        // const array4 = counts.filter((count) => {
-        // return count === 4
-        // }).length
-
-        // console.log(array4)
+        console.log(array4)
 
         // index_4s = []
         // index_4 = counts.indexOf(4)
@@ -128,6 +127,11 @@ window.addEventListener('load', () => {
         // index_4 = counts.indexOf(4,index_4+1)
         // index_4s.push(index_4);
         // }
+        // index_4s.forEach((index_4)=> {
+        // console.log(lines[index_4])
+        // })
+        
+        
 
 
 
