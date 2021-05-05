@@ -60,9 +60,6 @@ window.addEventListener('load', () => {
     console.log(numbers2)
     let sheetNumbersIndex = 0
     
-    
-    
-  
     // 以下ビンゴ判定。１２パターンを全て列挙
     while(sheetNumbersIndex < sheetNumbers.length){
       // 出力した数字と一致するものがシートにあったときそのボックスを赤くする
